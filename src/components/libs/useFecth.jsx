@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react/cjs/react.development';
 
 // url = http://localhost:4000/api/products
-export default function useFecth(url) {
+export default function useFecth(url, method) {
     const [data, setData] = useState(null)
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
@@ -10,7 +10,9 @@ export default function useFecth(url) {
     useEffect(() => {
 
 
-        fetch(url)
+        fetch(url, {
+            method: method
+        })
         .then(response => {
             if(response.ok){
                 return response.json()

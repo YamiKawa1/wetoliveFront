@@ -1,12 +1,14 @@
 import React from 'react'
 import { NavBarData } from './NavBarData'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHouseUser } from '@fortawesome/free-solid-svg-icons'
 
 export default function NavBar() {
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <div className="container-fluid">
-                    <a className="navbar-brand" href="#">Navbar</a>
+                <div className="container-fluid container">
+                    <span><FontAwesomeIcon icon={faHouseUser} className='me-2 mb-1'/><a className="navbar-brand" href="#">WeToLive</a></span>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                     </button>
